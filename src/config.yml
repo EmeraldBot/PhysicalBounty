@@ -1,0 +1,13 @@
+MaxBountiesPerPlayer: 0
+MaxBountiesOnPlayer: 5
+ApplicableItems:
+- DIAMOND
+- EMERALD
+- GOLD_INGOT
+- IRON_INGOT
+MaxItems: 64
+NotifyOnJoinDistance: 150
+ApplicableWorlds:
+- world
+- world_nether
+ExpirationTime: 259200

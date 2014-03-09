@@ -1,0 +1,7 @@
+name: PhysicalBounty
+author: MistPhizzle
+version: 1.0.0
+main: com.etriacraft.physicalbounty.PhysicalBounty
+commands:
+  bounty:
+    usage: /<command>
