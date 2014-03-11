@@ -29,12 +29,16 @@ public class PlayerListener implements Listener {
 			Location lloc = e.getPlayer().getLocation();
 			if (Methods.doesPlayerHaveBounty(e.getPlayer().getName())) {
 				for (Player player: Bukkit.getOnlinePlayers()) {
-					if (player.getLocation().distance(lloc) <= distance) {
-						player.sendMessage("§aA player with one or more bounties on their head has signed on within §7" + distance + "§a blocks of you.");
+					if (plugin.getConfig().getStringList("ApplicableWorlds").contains(player.getWorld().toString())) {
+						if (player.getWorld().getName().equals(lloc.getWorld().getName())) {
+							if (player.getLocation().distance(lloc) <= distance) {
+								player.sendMessage("§aA player with one or more bounties on their head has signed on within §7" + distance + "§a blocks of you.");
+							}
+						}
 					}
 				}
 			}
-			
+
 		}
 		Methods.redeemForPlayer(e.getPlayer());
 	}
